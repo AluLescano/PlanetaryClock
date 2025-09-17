@@ -1,0 +1,81 @@
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 2rem auto;
+}
+
+.hoursRing,
+.minutesRing,
+.secondsRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hoursRing {
+  width: 275px;
+  height: 275px;
+}
+
+.minutesRing {
+  width: 215px;
+  height: 215px;
+}
+
+.tick {
+  position: absolute;
+  width: 2px;
+  height: 15px;     // length
+  background: white;
+}
+
+.secondsRing {
+  width: 155px;
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.9rem;
+
+  span {
+    position: relative !important;
+    margin: 0.25rem;
+    padding: 0.35rem;
+    background-color: rgba(255, 165, 0, 0.5);
+    color: transparent;
+  }
+}
+
+.msRing {
+  @extend .hoursRing;
+  width: 30px;
+  height: 30px;
+  border: 1px dashed rgba(255, 255, 255, 0.75);
+}
+
+.planet,
+span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.msPlanet {
+  @extend .planet;
+  width: 10px;
+  height: 10px;
+}
